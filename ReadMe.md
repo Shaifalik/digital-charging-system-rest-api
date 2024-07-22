@@ -10,7 +10,7 @@ Charge Detail Records.
 - [Usage](#usage)
 - [Configuration](#configuration)
 - [Test](#test)
-- [Design Patterns](#Design Patterns)
+- [Design Patterns](#designpatterns)
 
 ## Installation
 
@@ -30,7 +30,12 @@ To install and set up the project, follow these steps:
     ```sh
     ./gradlew build
     ```
-
+   
+   In case of permission denied please run: 
+    ```sh
+    chmod +x gradlew
+    ```
+   
 3. **Run the application:**
     ```sh
     ./gradlew bootRun
@@ -45,7 +50,7 @@ To use the project, you can perform the following:
     http://localhost:8080
     ```
 
-Please refer to to Swagger API documentation for all APIs: http://locahost:8080/swagger-ui.html 
+Please refer to to Swagger API documentation for all APIs: http://localhost:8080/swagger-ui/index.html
 
 ##Testing
 
@@ -67,7 +72,7 @@ The test coverage reports can be generated with JaCoCo using below command.
 
 This will generate the report. - **Open index.html file in your browser:**
 
-##Design Patterns
+##DesignPattern
 
 We have included few design patterns to address to the code readability and maintainability.
 Some design patterns used includes:
