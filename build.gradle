@@ -2,6 +2,7 @@ plugins {
   id 'java'
   id 'org.springframework.boot' version '3.1.0'
   id 'io.spring.dependency-management' version '1.1.0'
+  id 'jacoco'
 }
 
 group = 'me.dcs'
@@ -37,4 +38,21 @@ tasks.jar {
 
 tasks.named('test') {
   useJUnitPlatform()
+}
+
+jacoco {
+  toolVersion = "0.8.8"
+}
+
+tasks.test {
+  useJUnitPlatform()
+  finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+  dependsOn test
+  reports {
+    xml.required.set(true)
+    html.required.set(true)
+  }
 }
